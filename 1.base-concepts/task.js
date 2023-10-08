@@ -16,7 +16,7 @@ console.log('Корни уравнения: ' + f);
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let p = percent/100/12; //преобразованная процентная ставка
-  let s = amount - contribution; //тело кредита = сумма кредита - первоначальный взнос
+  let s = amount - contribution; //тело кредита = сумма кредита - первонач. взнос
   let monthlyPayment = s * (p + (p / (((1 + p) ** countMonths) - 1))); //ежемесячный платеж
   let totalAmount = +(monthlyPayment * countMonths).toFixed(2); //общая сумма, которую заплатит клиент
   return totalAmount;
